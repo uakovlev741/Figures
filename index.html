@@ -87,9 +87,9 @@
         // 1. Сфера
         let sphere = new THREE.Mesh(
           new THREE.SphereGeometry(100, 32, 32),
-          new THREE.MeshPhongMaterial({ color: "#FF0000" })
+          new THREE.MeshPhongMaterial({ color: "blue" })
         );
-        sphere.position.set(-400, 100, -400);
+        sphere.position.set(-400, 100, 0);
         scene.add(sphere);
         sphere.height = 100; // Добавляем высоту для корректного позиционирования
         dragObjects.push(sphere);
@@ -97,9 +97,9 @@
         // 2. Цилиндр
         let cylinder = new THREE.Mesh(
           new THREE.CylinderGeometry(80, 80, 200, 64),
-          new THREE.MeshPhongMaterial({ color: "#007BFF" })
+          new THREE.MeshPhongMaterial({ color: "orange" })
         );
-        cylinder.position.set(0, 100, -400);
+        cylinder.position.set(0, 50, 400);
         scene.add(cylinder);
         cylinder.height = 100;
         dragObjects.push(cylinder);
@@ -107,9 +107,9 @@
         // 3. Куб
         let cube = new THREE.Mesh(
           new THREE.BoxGeometry(160, 160, 160),
-          new THREE.MeshPhongMaterial({ color: "orange" })
+          new THREE.MeshPhongMaterial({ color: "green" })
         );
-        cube.position.set(400, 80, -400);
+        cube.position.set(0, 100, -400);
         scene.add(cube);
         cube.height = 80;
         dragObjects.push(cube);
@@ -117,9 +117,9 @@
         // Пирамида
         let pyramid = new THREE.Mesh(
           new THREE.ConeGeometry(100, 200, 4),
-          new THREE.MeshPhongMaterial({ color: "pink" })
+          new THREE.MeshPhongMaterial({ color: "lightgreen" })
         );
-        pyramid.position.set(-400, 100, 0);
+        pyramid.position.set(-400, 100, -400);
         scene.add(pyramid);
         pyramid.height = 100;
         dragObjects.push(pyramid);
@@ -148,7 +148,7 @@
         // Призма (треугольная)
         let prism = new THREE.Mesh(
           new THREE.CylinderGeometry(80, 80, 180, 3),
-          new THREE.MeshPhongMaterial({ color: "#FF00F4" })
+          new THREE.MeshPhongMaterial({ color: "#FF0000" })
         );
         prism.position.set(-400, 90, 400);
         prism.rotation.z = Math.PI / 2; // положена на бок
@@ -162,15 +162,15 @@
           new THREE.BoxGeometry(200, 100, 120),
           new THREE.MeshPhongMaterial({ color: "#FFDD00" })
         );
-        cuboid.position.set(0, 50, 400);
+        cuboid.position.set(400, 80, -400);
         scene.add(cuboid);
         cuboid.height = 50;
         dragObjects.push(cuboid);
 
-        // Полусфера
+        // Полусфера  
         let hemisphere = new THREE.Mesh(
           new THREE.SphereGeometry(100, 32, 16, 0, Math.PI * 2, 0, Math.PI / 2),
-          new THREE.MeshPhongMaterial({ color: "green" })
+          new THREE.MeshPhongMaterial({ color: "#FF00F4" })
         );
         hemisphere.position.set(400, 100, 400);
         scene.add(hemisphere);
