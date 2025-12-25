@@ -159,12 +159,12 @@
 
         // Кубоид (прямоугольный параллелепипед)
         let cuboid = new THREE.Mesh(
-          new THREE.BoxGeometry(100, 100, 100),
+          new THREE.BoxGeometry(100, 200, 100),
           new THREE.MeshPhongMaterial({ color: "#FFDD00" })
         );
         cuboid.position.set(400, 80, -400);
         scene.add(cuboid);
-        cuboid.height = 150;
+        cuboid.height = 50;
         dragObjects.push(cuboid);
 
         // Полусфера  
