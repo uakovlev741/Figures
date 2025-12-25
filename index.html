@@ -109,14 +109,14 @@
           new THREE.BoxGeometry(160, 160, 160),
           new THREE.MeshPhongMaterial({ color: "green" })
         );
-        cube.position.set(0, 100, -400);
+        cube.position.set(-50, 100, -300);
         scene.add(cube);
         cube.height = 80;
         dragObjects.push(cube);
 
         // Пирамида
         let pyramid = new THREE.Mesh(
-          new THREE.ConeGeometry(200, 200, 4),
+          new THREE.ConeGeometry(100, 100, 4),
           new THREE.MeshPhongMaterial({ color: "lightgreen" })
         );
         pyramid.position.set(-400, 100, -400);
