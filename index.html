@@ -124,17 +124,6 @@
         pyramid.height = 100;
         dragObjects.push(pyramid);
 
-        // Тор
-        let torus = new THREE.Mesh(
-          new THREE.TorusGeometry(100, 30, 16, 100),
-          new THREE.MeshPhongMaterial({ color: "#8506A9" })
-        );
-        torus.position.set(0, 30, 0);
-        torus.rotation.x = Math.PI / 2;
-        scene.add(torus);
-        torus.height = 30;
-        dragObjects.push(torus);
-
         // Конус
         let cone = new THREE.Mesh(
           new THREE.ConeGeometry(100, 200, 32),
@@ -150,7 +139,7 @@
           new THREE.CylinderGeometry(80, 80, 180, 3),
           new THREE.MeshPhongMaterial({ color: "#FF0000" })
         );
-        prism.position.set(-400, 90, 400);
+        prism.position.set(-150, 90, 400);
         prism.rotation.z = Math.PI / 2; // положена на бок
         prism.rotation.x = (Math.PI**(1/2)) / 4;
         scene.add(prism);
